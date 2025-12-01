@@ -1,0 +1,38 @@
+import random
+
+print("🐍 Snake • 💧 Water • 🔫 Gun Game")
+print("--------------------------------")
+print("Choose one: snake, water, gun")
+
+choices = ["snake", "water",  "gun" ]
+
+user = input("Your choice: ").lower()
+
+computer = random.choice(choices)
+print(f"Computer chose: {computer}")
+
+if user == computer:
+    print("It's a draw!")
+
+elif user == "snake":
+    if computer == "water":
+        print("You win! 🐍 drinks 💧")
+    else:
+        print("You lose! 🔫 kills 🐍")
+
+elif user == "water":
+    if computer == "gun":
+        print("You win! 💧 rusts the 🔫")
+    else:
+        print("You lose! 🐍 drinks 💧")
+
+elif user == "gun":
+    if computer == "snake":
+        print("You win! 🔫 kills 🐍")
+    else:
+        print("You lose! 💧 rusts the 🔫")
+
+else:
+    print("Invalid choice! Please choose snake/water/gun.")
+
+
